@@ -4,11 +4,10 @@ import os
 from dotenv import load_dotenv
 
 st.title('🦜🔗 Quickstart App')
-load_dotenv()
-
+openai_api_key=OPENAI_API_KEY
 
 def generate_response(input_text):
-    llm = OpenAI(temperature=0.7, openai_api_key=OPENAI_API_KEY)
+    llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
     st.info(llm(input_text))
 
 
